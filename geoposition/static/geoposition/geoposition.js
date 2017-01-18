@@ -12,7 +12,6 @@ if (jQuery != undefined) {
             $("#geocomplete").geocomplete();
         });
 
-
         try {
             var _ = google;
         } catch (ReferenceError) {

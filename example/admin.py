@@ -4,6 +4,7 @@ from .models import PointOfInterest
 
 class PointOfInterestAdmin(admin.ModelAdmin):
     list_display = ('name', 'position', 'position_map',)
+    prepopulated_fields = {"address": ("name",)}
 
     def position_map(self, instance):
         if instance.position is not None:

@@ -43,9 +43,8 @@ class GeopositionWidget(forms.MultiWidget):
     class Media:
         js = (
             '//maps.googleapis.com/maps/api/js?key=%s&libraries=places' % settings.GOOGLE_MAPS_API_KEY,
-            '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
             'geoposition/geoposition.js',
-            '//cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.js',
+            'geoposition/jquery.geocomplete.js',
 
         )
         css = {
