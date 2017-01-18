@@ -21,6 +21,13 @@ Starting with version 0.3, django-geoposition requires Django 1.8 or greater.
 If you need to support Django versions prior to 1.8 please use django-geoposition 0.2.3.
 For Django versions prior to 1.4.10 please use django-geoposition 0.1.5.
 
+Todo
+----
+
+- [ ] Fix InvalidValueError: setComponentRestrictions: not an Object
+- [ ] Update jquery.geocomplete.js for newer Jquery versions
+- [ ] Rewrite init script
+
 
 Installation
 ------------

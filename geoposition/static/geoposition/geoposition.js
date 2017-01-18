@@ -8,6 +8,10 @@ if (jQuery != undefined) {
 (function($) {
 
     $(document).ready(function() {
+        $(function () {
+            $("#geocomplete").geocomplete();
+        });
+
 
         try {
             var _ = google;
@@ -30,10 +34,10 @@ if (jQuery != undefined) {
 
         $('.geoposition-widget').each(function() {
             var $container = $(this),
-                $mapContainer = $('<div class="geoposition-map" />'),
+                $mapContainer = $('<div class="geoposition-map map_canvas" />'),
                 $addressRow = $('<div class="geoposition-address" />'),
                 $searchRow = $('<div class="geoposition-search" />'),
-                $searchInput = $('<input>', {'type': 'search', 'placeholder': 'Start typing an address …'}),
+                $searchInput = $('<input>', {'id': 'geocomplete','type': 'text', 'placeholder': 'Start typing an address …'}),
                 $latitudeField = $container.find('input.geoposition:eq(0)'),
                 $longitudeField = $container.find('input.geoposition:eq(1)'),
                 latitude = parseFloat($latitudeField.val()) || null,
@@ -164,4 +168,5 @@ if (jQuery != undefined) {
             });
         });
     });
+
 })(django.jQuery);
